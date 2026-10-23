@@ -10,3 +10,7 @@ def read_root():
 @app.get("/addition")
 def add_numbers(a: int, b: int):
     return {"result a+b=": a + b, "developer": "Dev1"}
+
+@app.post("/multiply")
+def multiply_numbers(a: int, b: int):
+    return {"result a*b=": a * b, "developer": "Dev2"}
