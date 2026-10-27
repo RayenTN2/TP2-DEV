@@ -24,3 +24,7 @@ def divide_numbers(a: int, b: int):
 @app.delete("/remove/{item_id}")
 def delete_item(item_id: int):
     return {"message": f"Item {item_id} deleted successfully"}
+
+@app.put("/update/{item_id}")
+def update_item(item_id: int, name: str):
+    return {"message": f"Item {item_id} updated successfully", "new_name": name}
