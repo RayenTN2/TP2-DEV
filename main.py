@@ -10,9 +10,11 @@ def read_root():
 def add_numbers(a: int, b: int):
     return {"result a+b=": a + b, "developer": "Dev1"}
 
+
 @app.post("/multiply")
 def multiply_numbers(a: int, b: int):
     return {"result a*b=": a * b, "developer": "Dev2"}
+
 
 @app.post("/divide")
 def divide_numbers(a: int, b: int):
