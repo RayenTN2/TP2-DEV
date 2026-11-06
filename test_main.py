@@ -1,0 +1,9 @@
+from fastapi.testclient import TestClient
+from main import app
+
+client = TestClient(app)
+
+def test_soustraction():
+    response = client.get("/soustract/?a=5&b=3")
+    assert response.status_code == 200
+    assert response.json() == {"result": 2}

@@ -30,3 +30,7 @@ def delete_item(item_id: int):
 @app.put("/update/{item_id}")
 def update_item(item_id: int, name: str):
     return {"message": f"Item {item_id} updated successfully", "new_name": name}
+
+@app.get("/soustract/")
+def soustract(a: int, b: int):
+    return {"result": a - b}
